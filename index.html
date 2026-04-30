@@ -51,18 +51,28 @@
       background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
     }
 
-    /* Scrollbar */
     ::-webkit-scrollbar {
       width: 8px;
     }
 
     ::-webkit-scrollbar-track {
-      background: var(--color-cream);
+      background: #fdf8f4;
     }
 
     ::-webkit-scrollbar-thumb {
-      background: var(--color-deep-green);
+      background: #4a9e73;
       border-radius: 10px;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    }
+
+    .fade-up.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 
@@ -101,7 +111,7 @@
 
           <div class="absolute inset-4 overflow-hidden rounded-full border-4 border-white shadow-2xl bg-soft-green">
             <img src="profile6.jpg" alt="Trishadel Macalino - IT Student Portfolio"
-              class="w-full h-full object-cover transition-all duration-500">
+              class="w-full h-full object-cover transition-all duration-500 hover:scale-105">
           </div>
 
         </div>
@@ -160,14 +170,14 @@
         <div class="flex flex-wrap gap-2 mb-6">
           <span class="px-3 py-1 bg-soft-green text-deep-green text-[10px] font-bold rounded-md">Ohara.ai</span>
         </div>
-        <a href="#" class="text-sm font-bold text-deep-green hover:underline">View Case Study →</a>
       </article>
 
       <article class="bg-white rounded-3xl p-8 border border-green-50/50 shadow-xl shadow-green-900/5 group">
         <span class="text-3xl block mb-6">🛒</span>
         <h3 class="text-2xl font-bold mb-4 group-hover:text-deep-green transition-colors">POS System</h3>
         <p class="text-slate-500 text-sm mb-6 leading-relaxed">
-          <strong>Case Study Description:</strong> The Eats2Go Proposed System is an integrated digital platform designed to transform
+          <strong>Case Study Description:</strong> The Eats2Go Proposed System is an integrated digital platform
+          designed to transform
           traditional manual processes into an automated, data-driven operation. By centralizing core business
           functions, the system aims to optimize efficiency and provide a superior experience for both staff and
           customers.
@@ -177,9 +187,41 @@
           <span class="px-3 py-1 bg-soft-pink text-deep-pink text-[10px] font-bold rounded-md">MS SQL Server</span>
           <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold rounded-md">VS 2022</span>
         </div>
-        <a href="https://github.com/YourUsername" class="text-sm font-bold text-deep-green hover:underline">View Repo
+      </article>
+
+      <article class="bg-white rounded-3xl p-8 border border-green-50/50 shadow-xl shadow-green-900/5 group">
+        <span class="text-3xl block mb-6">🐍</span>
+        <h3 class="text-2xl font-bold mb-4 group-hover:text-deep-green transition-colors">Ghostly Adventure | Python
+        </h3>
+        <p class="text-slate-500 text-sm mb-6 leading-relaxed">
+          <strong>Console-based Maze Game</strong><br>
+
+        </p>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="px-3 py-1 bg-soft-green text-deep-green text-[10px] font-bold rounded-md">Python</span>
+          <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold rounded-md">Visual Studio</span>
+        </div>
+        <a href="https://github.com/3sha-del/Ghostly-Adventure-Python-Maze-Game"
+          class="text-sm font-bold text-deep-green hover:underline">View Repo
           →</a>
       </article>
+
+      <article class="bg-white rounded-3xl p-8 border border-green-50/50 shadow-xl shadow-green-900/5 group">
+        <span class="text-3xl block mb-6">🐍</span>
+        <h3 class="text-2xl font-bold mb-4 group-hover:text-deep-green transition-colors">Expense Tracker | Python</h3>
+        <p class="text-slate-500 text-sm mb-6 leading-relaxed">
+          <strong>Console-based Expense Tracker</strong><br>
+
+        </p>
+        <div class="flex flex-wrap gap-2 mb-6">
+          <span class="px-3 py-1 bg-soft-green text-deep-green text-[10px] font-bold rounded-md">Python</span>
+          <span class="px-3 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold rounded-md">Visual Studio</span>
+        </div>
+        <a href="https://github.com/3sha-del/Expense-Tracker-Python"
+          class="text-sm font-bold text-deep-green hover:underline">View Repo
+          →</a>
+      </article>
+
     </div>
   </section>
 
@@ -194,10 +236,29 @@
             <div class="flex flex-wrap gap-2">
               <span class="px-4 py-2 bg-white rounded-xl text-sm shadow-sm">C#</span>
               <span class="px-4 py-2 bg-white rounded-xl text-sm shadow-sm">Python</span>
+              <span class="px-4 py-2 bg-white rounded-xl text-sm shadow-sm">HTML</span>
+              <span class="px-4 py-2 bg-white rounded-xl text-sm shadow-sm">CSS</span>
+              <span class="px-4 py-2 bg-white rounded-xl text-sm shadow-sm">JavaScript</span>
+              <span class="px-4 py-2 bg-white rounded-xl text-sm shadow-sm">Dart </span>
               <span class="px-4 py-2 bg-white rounded-xl text-sm shadow-sm">PHP</span>
               <span class="px-4 py-2 bg-white rounded-xl text-sm shadow-sm">SQL</span>
             </div>
           </div>
+
+          <div>
+            <p class="text-xs font-bold uppercase tracking-widest text-deep-green mb-3">Mobile & Desktop Development</p>
+            <div class="flex flex-wrap gap-2">
+              <span
+                class="px-4 py-2 bg-pink-50 border-2 border-soft-pink rounded-xl text-sm shadow-sm font-semibold text-deep-pink">Flutter
+                ✦</span>
+              <span class="px-4 py-2 bg-white rounded-xl text-sm shadow-sm">Android Studio</span>
+              <span class="px-4 py-2 bg-white rounded-xl text-sm shadow-sm">Visual Studio 2022</span>
+              <span class="px-4 py-2 bg-white rounded-xl text-sm shadow-sm">MS SQL Server</span>
+              <span class="px-4 py-2 bg-white rounded-xl text-sm shadow-sm">MYSQL</span>
+
+            </div>
+          </div>
+
           <div>
             <p class="text-xs font-bold uppercase tracking-widest text-deep-green mb-3">Frontend & Design</p>
             <div class="flex flex-wrap gap-2">
@@ -222,52 +283,172 @@
             <h4 class="font-bold">Best UI/UX Award</h4>
             <p class="text-slate-500 text-sm">Base Build Program × Web3 Iloilo</p>
           </div>
+          <div>
+            <p class="text-[10px] font-bold text-deep-pink uppercase tracking-wide mb-1">2024</p>
+            <p class="font-semibold text-sm">Eats2Go POS System</p>
+            <p class="text-slate-500 text-sm ">C# + SQL Server desktop app</p>
+          </div>
+          <div>
+            <p class="text-[10px] font-bold text-deep-pink uppercase tracking-wide mb-1">2023</p>
+            <p class="font-semibold text-sm">Python Group Projects (×2)</p>
+            <p class="text-slate-500 text-sm">Ghostly Adventure + Expense Tracker</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="contact" class="py-24 px-6 text-center">
-    <div class="max-w-2xl mx-auto">
-      <h2 class="font-display text-4xl mb-4">Start a <span class="italic text-deep-green">Project</span></h2>
-      <p class="text-slate-500 mb-10">I’m currently looking for internships and collaborative web projects. Drop a
-        message!</p>
+  <!-- contact section -->
+  <section id="contact" class="py-20 px-6 text-center">
+    <div class="max-w-xl mx-auto">
 
-      <form class="bg-white p-8 rounded-3xl shadow-2xl shadow-green-900/5 text-left border border-green-50">
+      <div class="fade-up">
+        <p class="text-xs font-bold text-deep-pink uppercase tracking-widest mb-2">— get in touch</p>
+        <h2 class="font-display text-4xl mb-3">
+          Let's <span class="italic text-deep-green">Talk</span>
+        </h2>
+        <p class="text-slate-400 text-sm mb-8">
+          open to internships, collabs, or just a friendly message. i don't bite :)
+        </p>
+      </div>
+
+      <form
+        id="contact-form"
+        class="bg-white p-8 rounded-3xl shadow-xl shadow-green-900/5 text-left border border-green-50 fade-up"
+        style="transition-delay:0.1s"
+        novalidate
+      >
+        <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+
         <div class="grid sm:grid-cols-2 gap-4 mb-4">
           <div>
-            <label class="block text-[10px] font-bold uppercase mb-2">Name</label>
-            <input type="text"
-              class="w-full bg-cream border-0 rounded-xl p-3 focus:ring-2 focus:ring-deep-green transition-all outline-none">
+            <label for="cf-name" class="block text-[10px] font-bold uppercase tracking-wide mb-1.5 text-slate-500">Name</label>
+            <input
+              id="cf-name" type="text" name="name"
+              placeholder="Trisha Macalino"
+              required autocomplete="name"
+              class="w-full bg-cream rounded-xl p-3 text-sm outline-none focus:ring-2 focus:ring-deep-green transition-all border-0"
+            >
           </div>
           <div>
-            <label class="block text-[10px] font-bold uppercase mb-2">Email</label>
-            <input type="email"
-              class="w-full bg-cream border-0 rounded-xl p-3 focus:ring-2 focus:ring-deep-green transition-all outline-none">
+            <label for="cf-email" class="block text-[10px] font-bold uppercase tracking-wide mb-1.5 text-slate-500">Email</label>
+            <input
+              id="cf-email" type="email" name="email"
+              placeholder="username@email.com"
+              required autocomplete="email"
+              class="w-full bg-cream rounded-xl p-3 text-sm outline-none focus:ring-2 focus:ring-deep-green transition-all border-0"
+            >
           </div>
         </div>
-        <div class="mb-6">
-          <label class="block text-[10px] font-bold uppercase mb-2">Message</label>
-          <textarea rows="4"
-            class="w-full bg-cream border-0 rounded-xl p-3 focus:ring-2 focus:ring-deep-green transition-all outline-none"></textarea>
+
+        <div class="mb-5">
+          <label for="cf-message" class="block text-[10px] font-bold uppercase tracking-wide mb-1.5 text-slate-500">Message</label>
+          <textarea
+            id="cf-message" name="message" rows="4"
+            placeholder="Tell me what's up!"
+            required
+            class="w-full bg-cream rounded-xl p-3 text-sm outline-none focus:ring-2 focus:ring-deep-green transition-all border-0 resize-none"
+          ></textarea>
         </div>
-        <button type="submit"
-          class="w-full py-4 bg-deep-green text-white rounded-xl font-bold hover:shadow-lg hover:shadow-green-200 transition-all">Send
-          Message ✦</button>
+
+        <button
+          type="submit" id="cf-btn"
+          class="w-full py-4 bg-deep-green text-white rounded-xl font-bold text-sm hover:shadow-lg hover:shadow-green-200 hover:-translate-y-0.5 transition-all"
+        >
+          Send Message ✦
+        </button>
+
+        <!-- feedback messages -->
+        <p id="cf-success" class="hidden mt-4 text-center text-sm font-semibold text-deep-green">
+          ✓ got it! i'll get back to you soon :)
+        </p>
+        <p id="cf-error" class="hidden mt-4 text-center text-sm text-red-400">
+          something went wrong, try again!
+        </p>
       </form>
 
-      <div class="mt-12 flex justify-center gap-6">
-        <a href="https://linkedin.com/in/trishadel-macalino"
-          class="text-slate-400 hover:text-deep-pink font-bold text-xs uppercase tracking-widest">LinkedIn</a>
-        <a href="https://github.com"
-          class="text-slate-400 hover:text-deep-pink font-bold text-xs uppercase tracking-widest">GitHub</a>
+      <!-- social links -->
+      <div class="mt-10 flex justify-center gap-8 fade-up" style="transition-delay:0.2s">
+        <a href="https://www.linkedin.com/in/trishadel-macalino-785016407"
+          target="_blank" rel="noopener"
+          class="text-slate-400 hover:text-deep-pink font-bold text-xs uppercase tracking-widest transition-colors">
+          LinkedIn
+        </a>
+        <a href="https://github.com/3sha-del"
+          target="_blank" rel="noopener"
+          class="text-slate-400 hover:text-deep-pink font-bold text-xs uppercase tracking-widest transition-colors">
+          GitHub
+        </a>
       </div>
+
     </div>
   </section>
 
-  <footer class="py-8 border-t border-green-50 text-center text-[10px] text-slate-400 uppercase tracking-widest">
-    &copy; 2026 Trishadel Macalino — CPU BSIT
+  <footer class="py-6 border-t border-green-50 text-center text-[10px] text-slate-300 uppercase tracking-widest">
+    built by trishadel macalino · cpu bsit · <span id="yr"></span>
   </footer>
+
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+    const WORKER_URL = 'https://contact-form.trishadelmacalino15.workers.dev'; 
+
+    document.getElementById('contact-form').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const btn     = document.getElementById('cf-btn');
+      const success = document.getElementById('cf-success');
+      const errMsg  = document.getElementById('cf-error');
+
+      // reset messages
+      success.classList.add('hidden');
+      errMsg.classList.add('hidden');
+      btn.disabled = true;
+      btn.textContent = 'Sending…';
+
+      // grab form values
+      const payload = {
+        name:    document.getElementById('cf-name').value.trim(),
+        email:   document.getElementById('cf-email').value.trim(),
+        message: document.getElementById('cf-message').value.trim(),
+        website: this.querySelector('[name="website"]').value, 
+      };
+
+      try {
+        const res  = await fetch(WORKER_URL, {
+          method:  'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body:    JSON.stringify(payload),
+        });
+
+        const data = await res.json();
+
+        if (res.ok && data.success) {
+          success.classList.remove('hidden');
+          this.reset();
+        } else {
+          errMsg.textContent = data.error || 'something went wrong, try again!';
+          errMsg.classList.remove('hidden');
+        }
+      } catch (err) {
+        errMsg.textContent = 'network error! try emailing me directly.';
+        errMsg.classList.remove('hidden');
+      } finally {
+        btn.disabled = false;
+        btn.textContent = 'Send Message ✦';
+      }
+    });
+  </script>
 
 
 </body>
