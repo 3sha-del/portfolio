@@ -410,6 +410,18 @@
       const success = document.getElementById('cf-success');
       const errMsg  = document.getElementById('cf-error');
 
+      // FIX: Pre-flight Validation to stop empty messages
+      const nameVal = document.getElementById('cf-name').value.trim();
+      const emailVal = document.getElementById('cf-email').value.trim();
+      const messageVal = document.getElementById('cf-message').value.trim();
+      const honeypot = this.querySelector('[name="website"]').value;
+
+      if (!nameVal || !emailVal || !messageVal) {
+        errMsg.textContent = 'Please fill out all fields before sending.';
+        errMsg.classList.remove('hidden');
+        return; 
+      }
+
       // reset messages
       success.classList.add('hidden');
       errMsg.classList.add('hidden');
@@ -418,10 +430,10 @@
 
       // grab form values
       const payload = {
-        name:    document.getElementById('cf-name').value.trim(),
-        email:   document.getElementById('cf-email').value.trim(),
-        message: document.getElementById('cf-message').value.trim(),
-        website: this.querySelector('[name="website"]').value, 
+        name:    nameVal,
+        email:   emailVal,
+        message: messageVal,
+        website: honeypot, 
       };
 
       try {
