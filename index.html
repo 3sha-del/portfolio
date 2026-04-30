@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trishadel Macalino | Portfolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <style type="text/css">
+        @theme {
+            --color-soft-green: #e8f5ee;
+            --color-deep-green: #4a9e73;
+            --color-soft-pink: #fdeef3;
+            --color-deep-pink: #d95490;
+            --color-cream: #fdf8f4;
+
+            --font-display: "Playfair Display", serif;
+            --font-sans: "Plus Jakarta Sans", sans-serif;
+        }
+
+        /* UI */
+        .glass {
+            background: rgba(253, 248, 244, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        .noise {
+            position: fixed;
+            inset: 0;
+            opacity: 0.025;
+            z-index: 50;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--color-cream);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--color-deep-green);
+            border-radius: 10px;
+        }
+    </style>
+
+
+</head>
+<body class="bg-cream text-slate-800 font-sans overflow-x-hidden">
+    <div class="noise"></div>
+
+    <nav class="fixed top-0 w-full z-40 glass border-b border-green-100/50 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <span class="font-display italic text-deep-green text-xl font-bold tracking-tighter">T.M.</span>
+            <div class="space-x-8 text-sm font-medium text-slate-500">
+                <a href="#projects" class="hover:text-deep-pink transition-colors">Projects</a>
+                <a href="#skills" class="hover:text-deep-pink transition-colors">Skills</a>
+                <a href="#contact" class="hover:text-deep-pink transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+<header class="relative min-h-screen flex items-center justify-center px-6 pt-24 pb-12 overflow-hidden">
+  <div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-soft-green rounded-full blur-[100px] opacity-70"></div>
+  <div class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-soft-pink rounded-full blur-[100px] opacity-60"></div>
+
+  <div class="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+    
+    <div class="text-left order-2 md:order-1">
+      <span class="inline-block px-4 py-1 rounded-full bg-green-100 text-deep-green text-xs font-semibold tracking-widest uppercase mb-6">
+        3rd Year BSIT · CPU
+      </span>
+      <h1 class="font-display text-5xl md:text-6xl leading-tight mb-6">
+        Hi, I am <span class="italic text-deep-pink">Trishadel Macalino</span>.
+      </h1>
+      <p class="text-slate-600 text-lg mb-8 leading-relaxed">
+        I engineer, deploy, and maintain high-performance digital assets. As an <strong>IT student at Central Philippine University</strong>, I specialize in bridging the gap between robust backend logic and elegant, award-winning UI/UX.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4">
+        <a href="#projects" class="px-8 py-4 bg-deep-green text-white rounded-full font-semibold text-center shadow-lg shadow-green-200 hover:-translate-y-1 transition-all">View My Projects</a>
+        <a href="#contact" class="px-8 py-4 border-2 border-soft-pink text-deep-pink rounded-full text-center font-semibold hover:bg-soft-pink transition-all">Let's Connect</a>
+      </div>
+    </div>
+
+    <div class="relative order-1 md:order-2 flex justify-center">
+      <div class="relative w-64 h-64 md:w-80 md:h-80">
+        <div class="absolute inset-0 border-2 border-dashed border-deep-pink/30 rounded-full animate-[spin_20s_linear_infinite]"></div>
+        
+        <div class="absolute inset-4 overflow-hidden rounded-full border-4 border-white shadow-2xl bg-soft-green">
+          <img 
+            src="profile6.jpg" 
+            alt="Trishadel Macalino - IT Student Portfolio" 
+            class="w-full h-full object-cover transition-all duration-500"
+          >
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</header>
+    
+</body>
+</html>
